@@ -9,9 +9,8 @@
 
 
 @media (min-width: 1200px) { 
-    .card-question-number{
-        order: 3;
-        margin-left: 2vw;
+    .card-question-number{ 
+        margin-right: 2vw;
         flex: 5%;
     }
 

@@ -27,8 +27,9 @@
 
 @media (min-width: 1200px) { 
     .card-quiz-navigation{
-        margin-right: 2vw;
+        margin-left: 2vw;
         flex: 5%;
+        order: 3;
     }
 
  }
