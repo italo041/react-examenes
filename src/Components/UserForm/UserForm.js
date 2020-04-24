@@ -13,12 +13,28 @@ import ListaRespuestas from "../ListaRespuestas";
 const UserForm = (props) => {
   const [step, setStep] = useState(1);
   const [values, setValues] = useState({
-    rpta1: "",
-    rpta2: "",
-    rpta3: "",
-    rpta4: "",
-    rpta5: "",
+    rpta1: {
+      value:"",
+      isTrue:false
+    },
+    rpta2: {
+      value:"",
+      isTrue:false
+    },
+    rpta3: {
+      value:"",
+      isTrue:false
+    },
+    rpta4: {
+      value:"",
+      isTrue:false
+    },
+    rpta5: {
+      value:"",
+      isTrue:false
+    },
   });
+ 
 
   //Ir hacia adelante
   const nextStep = () => {
@@ -38,7 +54,7 @@ const UserForm = (props) => {
             nextStep={nextStep}
             prevStep={prevStep}
             values={values}
-            setValues={setValues}
+            setValues={setValues} 
           ></Step1>
         );
       case 2:
@@ -47,7 +63,7 @@ const UserForm = (props) => {
             nextStep={nextStep}
             prevStep={prevStep}
             values={values}
-            setValues={setValues}
+            setValues={setValues} 
           ></Step2>
         );
 
@@ -57,7 +73,7 @@ const UserForm = (props) => {
             nextStep={nextStep}
             prevStep={prevStep}
             values={values}
-            setValues={setValues}
+            setValues={setValues} 
           ></Step3>
         );
 
@@ -67,7 +83,7 @@ const UserForm = (props) => {
             nextStep={nextStep}
             prevStep={prevStep}
             values={values}
-            setValues={setValues}
+            setValues={setValues} 
           ></Step4>
         );
 
@@ -77,7 +93,7 @@ const UserForm = (props) => {
             nextStep={nextStep}
             prevStep={prevStep}
             values={values}
-            setValues={setValues}
+            setValues={setValues} 
           ></Step5>
         );
 
@@ -87,7 +103,7 @@ const UserForm = (props) => {
             nextStep={nextStep}
             prevStep={prevStep}
             values={values}
-            setValues={setValues}
+            setValues={setValues} 
           ></ListaRespuestas>
         );
     }

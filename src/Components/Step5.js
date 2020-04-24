@@ -1,33 +1,51 @@
 import React from "react";
 import CardPregunta from "./CardPregunta/CardPregunta";
-import { Button, Form } from "react-bootstrap"; 
+import { Button, Form } from "react-bootstrap";
 
 const Step5 = (props) => {
-    const { nextStep, prevStep, values, setValues } = props; 
+  const { nextStep, prevStep, values, setValues } = props;
   return (
     <CardPregunta>
       <Form.Group>
-        <Form.Label>¿30+20?</Form.Label>
+        <Form.Label>¿Quien fue Miguel Grau Seminario?</Form.Label>
         <Form.Check
           type="radio"
-          label="50"
+          label="Un pintor"
           name="formHorizontalRadios"
           id="formHorizontalRadios1"
-          onChange={(e) => setValues({ ...values, rpta5: 50 })}
+          value="Un pintor"
+          onChange={(e) => {
+            setValues({
+              ...values,
+              rpta5: { value: e.target.value, isTrue: false },
+            });
+          }}
         />
         <Form.Check
           type="radio"
-          label="60"
+          label="Un escritor"
           name="formHorizontalRadios"
-          id="formHorizontalRadios2"
-          onChange={(e) => setValues({ ...values, rpta5: 60 })}
+          id="formHorizontalRadios1"
+          value="Un escritor"
+          onChange={(e) => {
+            setValues({
+              ...values,
+              rpta5: { value: e.target.value, isTrue: false },
+            });
+          }}
         />
         <Form.Check
           type="radio"
-          label="Ninguno"
+          label="Un marino militar peruano"
           name="formHorizontalRadios"
-          id="formHorizontalRadios3"
-          onChange={(e) => setValues({ ...values, rpta5: "Ninguno" })}
+          id="formHorizontalRadios1"
+          value="Un marino militar peruano"
+          onChange={(e) => {
+            setValues({
+              ...values,
+              rpta5: { value: e.target.value, isTrue: true },
+            });
+          }}
         />
       </Form.Group>
 

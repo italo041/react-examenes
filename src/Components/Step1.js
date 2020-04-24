@@ -10,12 +10,45 @@ const Step1 = (props) => {
   return (
     <CardPregunta>
       <Form.Group>
-        <Form.Label>¿Cuanto es 1+1?</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="..."
-          onChange={(e) => setValues({ ...values, rpta1: e.target.value })}
-          value={values.rpta1}
+        <Form.Label>¿Cuanto es 35x30?</Form.Label>
+        <Form.Check
+          type="radio"
+          label="1050"
+          name="formHorizontalRadios"
+          id="formHorizontalRadios1"
+          value="1050"
+          onChange={(e) => {
+            setValues({
+              ...values,
+              rpta1: { value: e.target.value, isTrue: true },
+            });
+          }}
+        />
+        <Form.Check
+          type="radio"
+          label="950"
+          name="formHorizontalRadios"
+          id="formHorizontalRadios1"
+          value="950"
+          onChange={(e) => {
+            setValues({
+              ...values,
+              rpta1: { value: e.target.value, isTrue: false },
+            });
+          }}
+        />
+        <Form.Check
+          type="radio"
+          label="1015"
+          name="formHorizontalRadios"
+          id="formHorizontalRadios1"
+          value="1015"
+          onChange={(e) => {
+            setValues({
+              ...values,
+              rpta1: { value: e.target.value, isTrue: false },
+            });
+          }}
         />
       </Form.Group>
       <Button

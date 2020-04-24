@@ -9,13 +9,7 @@ const Step3 = (props) => {
   return (
     <CardPregunta>
       <Form.Group>
-        <Form.Label>¿Quien fue Simon Bolivar?</Form.Label>
-        {/* <Form.Control
-          type="text"
-          placeholder="..."
-          onChange={(e) => setValues({ ...values, rpta3: e.target.value })}
-          value={values.rpta3}
-        /> */}
+        <Form.Label>¿Quien es Simon Bolivar?</Form.Label>
         <div className="d-flex flex-row justify-content-center">
           <Card className="mx-2">
             <LazyLoadImage
@@ -31,25 +25,37 @@ const Step3 = (props) => {
                 label=""
                 name="formHorizontalRadios"
                 id="formHorizontalRadios1"
-                onChange={(e) => setValues({ ...values, rpta3: "Verdadera" })}
+                value="Correcta"
+                onChange={(e) => {
+                  setValues({
+                    ...values,
+                    rpta3: { value: e.target.value, isTrue: true },
+                  });
+                }}
               />
             </Card.Body>
           </Card>
           <Card className="mx-2">
-          <LazyLoadImage
+            <LazyLoadImage
               alt={""}
               effect="blur"
               src={"img/san_martin.jpg"}
               className="img_pregunta"
               delayTime={1000}
-            /> 
+            />
             <Card.Body>
               <Form.Check
                 type="radio"
                 label=""
                 name="formHorizontalRadios"
                 id="formHorizontalRadios2"
-                onChange={(e) => setValues({ ...values, rpta3: "Falsa" })}
+                value="Incorrecta"
+                onChange={(e) => {
+                  setValues({
+                    ...values,
+                    rpta3: { value: e.target.value, isTrue: false },
+                  });
+                }}
               />
             </Card.Body>
           </Card>
