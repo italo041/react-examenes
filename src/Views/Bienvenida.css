@@ -1,6 +1,13 @@
-.form-centrado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.form-centrado{ 
 }
+
+.card-bienvenida{
+    background-color: #F5F5F5!important;
+    border-color:#E5E5E5!important;
+}
+
+@media (min-width: 1200px) { 
+    .card-bienvenida{
+        margin: 3vw 3vw;
+    }
+ }

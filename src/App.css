@@ -29,10 +29,17 @@
   color: #61dafb;
 }
 
-.barra{
-  position: absolute!important;
-  width: 100%;
-  z-index: 1000;
+.barra{ 
+  display: flex;
+  justify-content: center!important;
+  align-items: center;
+}
+
+.navbar-brand {
+  margin-right: 0rem!important;
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
 }
 
 @keyframes App-logo-spin {

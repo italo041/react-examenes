@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTimer } from 'react-timer-hook'; 
+import './Timer.css';
  
 function Timer({ expiryTimestamp }) {
  
@@ -13,18 +14,16 @@ function Timer({ expiryTimestamp }) {
     pause,
     resume,
     restart,
-  } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
+  } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called')});
   
   window.pausarTimer = function() {
-      console.log("se pauso");
       pause();
-   } 
- 
+   }  
   return (
     <div style={{textAlign: 'center'}}>
   
-      <div style={{fontSize: '100px'}}>
-       <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+      <div className="timer-style font-weight-bold">
+       <span>{minutes < 10 ? '0'+minutes : minutes}</span>:<span>{seconds}</span>
       </div>
       
     </div>

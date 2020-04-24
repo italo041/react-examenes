@@ -1,0 +1,9 @@
+.timer-style{
+    font-size: 5vw;
+}
+
+@media (min-width: 1200px) { 
+    .timer-style{
+        font-size: 1vw!important;
+    }
+ }

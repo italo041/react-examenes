@@ -1,0 +1,12 @@
+.card-pregunta{
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+@media (min-width: 1200px) { 
+    .card-pregunta{
+        flex-grow: 4;
+    }
+
+ }

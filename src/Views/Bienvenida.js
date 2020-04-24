@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, Container } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import './Bienvenida.css'  
 const Bienvenida = (props) => {
@@ -8,17 +8,15 @@ const Bienvenida = (props) => {
   
     
   return (
-    <div className="form-centrado">
-      <Container>
-        <Card>
-          <Card.Header>Empezar Examen</Card.Header>
-          <Card.Body>
-            <Card.Title>Bienvenido</Card.Title>
+    <div className="form-centrado">  
+        <Card  className="card-bienvenida"> 
+          <Card.Body >
+            <Card.Title  className="text-secondary">Bienvenido</Card.Title>
             <Card.Text>
-              Toque el botom empezar para iniciar su examen.
+              Toque el boton empezar para iniciar su examen.
             </Card.Text>
             <Button
-              variant="dark"
+              variant="info"
               onClick={() => {
                 history.push("formulario") }}
             >
@@ -28,7 +26,7 @@ const Bienvenida = (props) => {
           </Card.Body>
           
         </Card>
-      </Container>
+ 
     </div>
   );
 };

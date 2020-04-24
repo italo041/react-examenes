@@ -1,0 +1,27 @@
+.useform-style{
+    display: flex;
+    flex-direction: column; 
+}
+
+.img_pregunta{
+    max-width: 35vw;
+    min-width: 35vw;
+    max-height: 30vw;
+    min-height: 30vw;
+}
+
+ 
+@media (min-width: 1200px) { 
+    .useform-style{ 
+        flex-direction: row;  
+        margin: 3vw 3vw;
+    }
+
+    .img_pregunta{
+        max-width: 15vw;
+        min-width: 15vw;
+        max-height: 10vw;
+        min-height: 10vw;
+    }
+
+ }
